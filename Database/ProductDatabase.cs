@@ -5,7 +5,7 @@ namespace CRUD2.Database
     public class ProductDatabase
     {   
         //change this to your connection string also change the value for the myConnectionString in program.cs, you will find it in "appsettings.Development.json"
-        private const string ConnectionString = "Server=127.0.0.1;Database=CRUDAppDB;User=root;Password=$$eif@eldin_1020;";
+        private const string ConnectionString = "Server=127.0.0.1;Database=CRUDAppDB;User=root;Password=<your-password>;";
 
         // Creates and returns a MySQL connection
         public MySqlConnection ConnectToDatabase()
