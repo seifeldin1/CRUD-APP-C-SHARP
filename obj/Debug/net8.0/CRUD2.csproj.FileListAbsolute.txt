@@ -52,3 +52,4 @@ C:\Users\Seifeldin Sameh\Desktop\Self Practice C#\CRUD2\bin\Debug\net8.0\runtime
 C:\Users\Seifeldin Sameh\Desktop\Self Practice C#\CRUD2\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\Seifeldin Sameh\Desktop\Self Practice C#\CRUD2\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Seifeldin Sameh\Desktop\Self Practice C#\CRUD2\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Seifeldin Sameh\Desktop\Self Practice C#\CRUD2\obj\Debug\net8.0\CRUD2.sourcelink.json

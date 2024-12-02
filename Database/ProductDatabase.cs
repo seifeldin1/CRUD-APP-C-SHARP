@@ -5,7 +5,7 @@ namespace CRUD2.Database
     public class ProductDatabase
     {   
         //change this to your connection string also change the value for the myConnectionString in program.cs, you will find it in "appsettings.Development.json"
-        private const string ConnectionString = "Server=127.0.0.1;Database=CRUDAppDB;User=root;Password=<your-password>;";
+        private const string ConnectionString = "Server=127.0.0.1;Database=CR2;User=root;Password=$$eif@eldin_1020;";
 
         // Creates and returns a MySQL connection
         public MySqlConnection ConnectToDatabase()
@@ -21,16 +21,16 @@ namespace CRUD2.Database
                 connection.Open();
 
                 // Create database if it doesn't exist
-                var createDatabaseCommand = new MySqlCommand("CREATE DATABASE IF NOT EXISTS CRUDAppDB;", connection);
+                var createDatabaseCommand = new MySqlCommand("CREATE DATABASE IF NOT EXISTS CRTest;", connection);
                 createDatabaseCommand.ExecuteNonQuery();
 
                 // Select the database
-                var useDatabaseCommand = new MySqlCommand("USE CRUDAppDB;", connection);
+                var useDatabaseCommand = new MySqlCommand("USE CRTest;", connection);
                 useDatabaseCommand.ExecuteNonQuery();
 
                 // Create Products table
                 var createTableCommand = new MySqlCommand(@"
-                    CREATE TABLE IF NOT EXISTS Products (
+                    CREATE TABLE IF NOT EXISTS Product (
                         Product_id INT AUTO_INCREMENT PRIMARY KEY,
                         Product_Name VARCHAR(255) NOT NULL,
                         Product_Description TEXT,

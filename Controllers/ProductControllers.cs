@@ -35,6 +35,7 @@ namespace CRUD2.Controllers
             }
         }
 
+        
         // DELETE method to remove a product by its ID
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)

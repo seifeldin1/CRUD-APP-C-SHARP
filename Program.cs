@@ -33,8 +33,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();  // Enforce HTTP Strict Transport Security for enhanced security
 }
 
-// Unfortunately not working as expected yet :(
-// TO-DO: Fix the error encountering from the setup
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

@@ -22,7 +22,7 @@ namespace CRUD2.Services
             {
                 connection.Open();
                 // Define the SQL query to insert a new product
-                var query = "INSERT INTO Products (Product_Name, Product_Description, Price, Seller) VALUES (@Name, @Description, @Price, @Seller);";
+                var query = "INSERT INTO Product (Product_Name, Product_Description, Price, Seller) VALUES (@Name, @Description, @Price, @Seller);";
 
                 // Prepare and execute the query with parameters
                 using (var command = new MySqlCommand(query, connection))
@@ -45,7 +45,7 @@ namespace CRUD2.Services
             {
                 connection.Open();
                 // Define the SQL query to delete a product by its ID
-                var query = "DELETE FROM Products WHERE Product_id = @Id;";
+                var query = "DELETE FROM Product WHERE Product_id = @Id;";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", id); // Add the product ID parameter
@@ -63,7 +63,7 @@ namespace CRUD2.Services
             {
                 connection.Open();
                 // Define the SQL query to select all products
-                var query = "SELECT * FROM Products;";
+                var query = "SELECT * FROM Product;";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     // Execute the query and read the results
@@ -95,7 +95,7 @@ namespace CRUD2.Services
             {
                 connection.Open();
                 // Define the SQL query to update a product's details
-                var query = "UPDATE Products SET Product_Name = @Name, Product_Description = @Description, Price = @Price, Seller = @Seller WHERE Product_id = @Id;";
+                var query = "UPDATE Product SET Product_Name = @Name, Product_Description = @Description, Price = @Price, Seller = @Seller WHERE Product_id = @Id;";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Name", product.Name);
@@ -117,7 +117,7 @@ namespace CRUD2.Services
             {
                 connection.Open();
                 // Define the SQL query to select a product by name
-                var query = "SELECT * FROM Products WHERE Product_Name = @Name LIMIT 1;";
+                var query = "SELECT * FROM Product WHERE Product_Name = @Name LIMIT 1;";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Name", name); // Add the product name parameter
